@@ -17,7 +17,8 @@
     
     options = $.extend({
       counter:            '#counter',
-      countType:          'characters',
+      includeCounterLabel: false,
+      countType:          'characters',      
       maxCount:           140,
       strictMax:          false,
       countDirection:     'down',
@@ -104,6 +105,7 @@
           else { changeCountableValue(content.substring(0, options.maxCount)); }
           count = 0, revCount = options.maxCount;
         }
+        
         
         counter.text(numberFormat(countInt()));
         

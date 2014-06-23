@@ -106,8 +106,7 @@
           count = 0, revCount = options.maxCount;
         }
         
-        
-        counter.text(numberFormat(countInt()));
+        counter.text(numberFormat(countInt()).toString() + (options.includeCounterLabel ? ' ' + options.countType : ''));
         
         /* Set CSS class rules and API callbacks */
         if (!counter.hasClass(options.safeClass) && !counter.hasClass(options.overClass)){
